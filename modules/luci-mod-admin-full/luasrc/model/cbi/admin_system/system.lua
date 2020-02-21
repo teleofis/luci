@@ -21,7 +21,20 @@ s.addremove = false
 s:tab("general",  translate("General Settings"))
 s:tab("logging",  translate("Logging"))
 s:tab("language", translate("Language and Style"))
+s:tab("usb", translate("USB Configuration"))
 
+--
+-- USB Properties
+--
+
+o = s:taboption("usb", ListValue, "usbmode", translate("USB Mode"), translate("Changes will be applied after reboot"))
+  o.nowrite = true
+  o.default = "diag,serial,rmnet"
+  o:value("disabled", translate("disabled"))
+  o:value("diag,serial,rmnet", translate("default"))
+  o:value("diag,serial,rmnet,adb", translate("default with ADB"))
+  o:value("ncm", translate("Ethernet over USB: Network Control Model"))
+  o:value("rndis", translate("Ethernet over USB: Remote NDIS"))
 
 --
 -- System Properties
@@ -58,6 +71,7 @@ function o.write(self, section, value)
 	local timezone = lookup_zone(value) or "GMT0"
 	self.map.uci:set("system", section, "timezone", timezone)
 	fs.writefile("/etc/TZ", timezone .. "\n")
+	luci.sys.call("ln -sf /usr/share/zoneinfo/%s /tmp/localtime" %{ value })
 end
 
 
@@ -73,7 +87,7 @@ o.datatype    = "uinteger"
 o = s:taboption("logging", Value, "log_ip", translate("External system log server"))
 o.optional    = true
 o.placeholder = "0.0.0.0"
-o.datatype    = "host"
+o.datatype    = "ip4addr"
 
 o = s:taboption("logging", Value, "log_port", translate("External system log server port"))
 o.optional    = true
@@ -191,21 +205,8 @@ if has_ntpd then
 		o = s:option(Flag, "enable", translate("Enable NTP client"))
 		o.rmempty = false
 
-		function o.cfgvalue(self)
-			return sys.init.enabled("sysntpd")
-				and self.enabled or self.disabled
-		end
-
-		function o.write(self, section, value)
-			if value == self.enabled then
-				sys.init.enable("sysntpd")
-				sys.call("env -i /etc/init.d/sysntpd start >/dev/null")
-			else
-				sys.call("env -i /etc/init.d/sysntpd stop >/dev/null")
-				sys.init.disable("sysntpd")
-			end
-		end
-
+		o = s:option(Flag, "use_gps", translate("GPS Clock Synchronization"))
+		o:depends("enable", "1")
 
 		o = s:option(Flag, "enable_server", translate("Provide NTP server"))
 		o:depends("enable", "1")
