@@ -18,6 +18,9 @@
 	local sysinfo = luci.util.ubus("system", "info") or { }
 	local boardinfo = luci.util.ubus("system", "board") or { }
 	local unameinfo = nixio.uname() or { }
+	local firmwarev = luci.sys.exec("grep -r VERSION /etc/openwrt_version | sed 's/VERSION=//g' | sed 's/\"//g'") or { }
+	local serialnum = luci.sys.exec("datacall_cli -I | sed 's/\"//g'") or { }
+	local devinfo = luci.util.ubus("info", "info") or {}
 
 	local meminfo = sysinfo.memory or {
 		total = 0,
@@ -49,6 +52,9 @@
 			uptime     = sysinfo.uptime or 0,
 			localtime  = os.date(),
 			loadavg    = sysinfo.load or { 0, 0, 0 },
+			adc        = devinfo.voltage or 0,
+			temp       = devinfo.temperature or 0,
+			rssi       = devinfo.rssi or 0,
 			memory     = meminfo,
 			swap       = swapinfo,
 			connmax    = conn_max,
@@ -274,15 +280,7 @@
 						var icon;
 						if (net.disabled)
 							icon = "<%=resource%>/icons/signal-none.png";
-						else if (net.quality <= 0)
-							icon = "<%=resource%>/icons/signal-0.png";
-						else if (net.quality < 25)
-							icon = "<%=resource%>/icons/signal-0-25.png";
-						else if (net.quality < 50)
-							icon = "<%=resource%>/icons/signal-25-50.png";
-						else if (net.quality < 75)
-							icon = "<%=resource%>/icons/signal-50-75.png";
-						else
+						else 
 							icon = "<%=resource%>/icons/signal-75-100.png";
 
 						vifs.push(renderBadge(
@@ -300,8 +298,7 @@
 						dev.device, dev.up || net0.up,
 						[ E('div', vifs) ],
 						'<%:Type%>', dev.name.replace(/^Generic | Wireless Controller .+$/g, ''),
-						'<%:Channel%>', net0.channel ? '%d (%.3f <%:GHz%>)'.format(net0.channel, net0.frequency) : '-',
-						'<%:Bitrate%>', net0.bitrate ? '%d <%:Mbit/s%>'.format(net0.bitrate) : '-'));
+						'<%:Channel%>', net0.channel ? '%d (%.3f <%:GHz%>)'.format(net0.channel, net0.frequency) : '-'));
 				}
 
 				if (!ws.lastElementChild)
@@ -324,6 +321,15 @@
 					info.loadavg[1] / 65535.0,
 					info.loadavg[2] / 65535.0
 				);
+
+			if (e = document.getElementById('adc'))
+				e.innerHTML = String.format('%s',info.adc);
+
+			if (e = document.getElementById('temp'))
+				e.innerHTML = info.temp;
+
+			if (e = document.getElementById('rssi'))
+				e.innerHTML = info.rssi;
 
 			if (e = document.getElementById('memtotal'))
 				e.innerHTML = progressbar(
@@ -370,15 +376,15 @@
 	<div class="table" width="100%">
 		<div class="tr"><div class="td left" width="33%"><%:Hostname%></div><div class="td left"><%=luci.sys.hostname() or "?"%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Model%></div><div class="td left"><%=pcdata(boardinfo.model or "?")%></div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Architecture%></div><div class="td left"><%=pcdata(boardinfo.system or "?")%></div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Firmware Version%></div><div class="td left">
-			<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%> /
-			<%=pcdata(ver.luciname)%> (<%=pcdata(ver.luciversion)%>)
-		</div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Serial Number%></div><div class="td left"><%=pcdata(serialnum or "?")%></div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Firmware Version%></div><div class="td left"><%=pcdata(firmwarev)%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Kernel Version%></div><div class="td left"><%=unameinfo.release or "?"%></div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Local Time%></div><div class="td left" id="localtime">-</div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Uptime%></div><div class="td left" id="uptime">-</div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Load Average%></div><div class="td left" id="loadavg">-</div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Load Average%></div><div class="td left" id="loadavg">-</div></div>	
+		<div class="tr"><div class="td left" width="33%"><%:Input Voltage%></div><div class="td left" id="adc">-</div></div>	
+		<div class="tr"><div class="td left" width="33%"><%:CPU Temperature%></div><div class="td left" id="temp">-</div></div>	
+		<div class="tr"><div class="td left" width="33%"><%:Mobile RSSI%></div><div class="td left" id="rssi">-</div></div>
 	</div>
 </div>
 

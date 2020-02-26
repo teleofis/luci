@@ -1,0 +1,7 @@
+#!/bin/sh
+uci batch <<-EOF
+	set luci.themes.Teleofis=/luci-static/teleofis
+	set luci.main.mediaurlbase=/luci-static/teleofis
+	commit luci
+EOF
+exit 0

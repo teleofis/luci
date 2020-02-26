@@ -231,6 +231,10 @@ function iface_status(ifaces)
 				subdevices = { }
 			}
 
+			if data.ifname == "rmnet_data0" then
+				data.macaddr    = nil
+			end
+
 			for _, device in ipairs(net:get_interfaces() or {}) do
 				data.subdevices[#data.subdevices+1] = {
 					name       = device:shortname(),

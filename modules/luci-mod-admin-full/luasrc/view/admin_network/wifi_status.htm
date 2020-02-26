@@ -7,20 +7,12 @@
 			if (iw && (iw = iw[0]))
 			{
 				var is_assoc = (iw.bssid && iw.bssid != '00:00:00:00:00:00' && iw.channel && !iw.disabled);
-				var p = iw.quality;
+				var p = 100;
 				var q = iw.disabled ? -1 : p;
 
 				var icon;
 				if (q < 0)
 					icon = "<%=resource%>/icons/signal-none.png";
-				else if (q == 0)
-					icon = "<%=resource%>/icons/signal-0.png";
-				else if (q < 25)
-					icon = "<%=resource%>/icons/signal-0-25.png";
-				else if (q < 50)
-					icon = "<%=resource%>/icons/signal-25-50.png";
-				else if (q < 75)
-					icon = "<%=resource%>/icons/signal-50-75.png";
 				else
 					icon = "<%=resource%>/icons/signal-75-100.png";
 
@@ -40,16 +32,11 @@
 						'<strong><%:BSSID%>:</strong> %s<br />' +
 						'<strong><%:Encryption%>:</strong> %s<br />' +
 						'<strong><%:Channel%>:</strong> %d (%.3f <%:GHz%>)<br />' +
-						'<strong><%:Tx-Power%>:</strong> %d <%:dBm%><br />' +
-						'<strong><%:Signal%>:</strong> %d <%:dBm%> | ' +
-						'<strong><%:Noise%>:</strong> %d <%:dBm%><br />' +
-						'<strong><%:Bitrate%>:</strong> %.1f <%:Mbit/s%> | ' +
 						'<strong><%:Country%>:</strong> %s',
 							iw.mode, iw.ssid, iw.bssid,
 							iw.encryption ? iw.encryption : '<%:None%>',
 							iw.channel, iw.frequency ? iw.frequency : 0,
-							iw.txpower, iw.signal, iw.noise,
-							iw.bitrate ? iw.bitrate : 0, iw.country
+							iw.country
 					);
 				else
 					info.innerHTML = String.format(
