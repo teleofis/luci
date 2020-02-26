@@ -28,7 +28,7 @@
 		<header>
 			<div class="fill">
 				<div class="container">
-					<p class="brand"><%=luci.sys.hostname() or "?"%></p>
+					<p class="brand" href="<%=pcdata(luci.dispatcher.build_url("admin/status/overview"))%>"></p>
 				</div>
 			</div>
 		</header>

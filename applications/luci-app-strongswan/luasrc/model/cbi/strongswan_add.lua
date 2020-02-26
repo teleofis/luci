@@ -7,7 +7,7 @@ local m = Map("ipsec", translate("IPsec"))
 
 local s = m:section( TypedSection, "conn", translate("IPsec Configuration"), translate("") )
 	s.addremove = true
-	s.template = "strongswan/tblsection"
+	s.template = "cbi/tblsection"
 	s.novaluetext = translate("There are no IPsec configurations yet")
 	s.extedit = luci.dispatcher.build_url("admin", "services", "ipsec", "%s")
 	s.defaults = {enabled = "0"}
@@ -15,9 +15,9 @@ local s = m:section( TypedSection, "conn", translate("IPsec Configuration"), tra
 
 
 
-local status = s:option(Flag, "enabled", translate("Enabled"), translate("Make a rule active/inactive"))
+local status = s:option(Flag, "enabled", translate("Enabled"))
 
-o = s:option( DummyValue, "aggressive", translate("Mode"), translate("ISAKMP (Internet Security Association and Key Management Protocol) phase 1 exchange mode"))
+o = s:option( DummyValue, "aggressive", translate("Mode"))
 
 	function o.cfgvalue(self, section)
 		local value = self.map:get(section, self.option)
@@ -29,7 +29,7 @@ o = s:option( DummyValue, "aggressive", translate("Mode"), translate("ISAKMP (In
 		end
 	end
 
-dpd = s:option( DummyValue, "dpdaction", translate("Dead Peer Detection"), translate("The values clear, hold, and restart all activate DPD."))
+dpd = s:option( DummyValue, "dpdaction", translate("Dead Peer Detection"))
 
 	function dpd.cfgvalue(self, section, value)
 		local value = self.map:get(section, self.option)
@@ -42,7 +42,7 @@ dpd = s:option( DummyValue, "dpdaction", translate("Dead Peer Detection"), trans
 	end
 
 
-o = s:option( DummyValue, "right", translate("Remote VPN endpoint"), translate("Domain name or IP address. Leave empty for any"))
+o = s:option( DummyValue, "right", translate("Remote VPN endpoint"))
 
 	function o.cfgvalue(self, section)
 		return self.map:get(section, self.option) or "-"
