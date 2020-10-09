@@ -492,10 +492,10 @@ if hwtype == "mac80211" then
 	wmm:depends({mode="ap-wds"})
 	wmm.default = wmm.enabled
 
-	isolate = s:taboption("advanced", Flag, "isolate", translate("Isolate Clients"),
+	isolated = s:taboption("advanced", Flag, "isolated", translate("Isolate Clients"),
 	 translate("Prevents client-to-client communication"))
-	isolate:depends({mode="ap"})
-	isolate:depends({mode="ap-wds"})
+	isolated:depends({mode="ap"})
+	isolated:depends({mode="ap-wds"})
 
 	ifname = s:taboption("advanced", Value, "ifname", translate("Interface name"), translate("Override default interface name"))
 	ifname.optional = true
