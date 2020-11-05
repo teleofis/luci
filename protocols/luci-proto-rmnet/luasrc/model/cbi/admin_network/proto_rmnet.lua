@@ -10,10 +10,10 @@ device = section:taboption("general", Value, "device", translate("Interface name
 device.default = "rmnet_data0"
 
 mode = section:taboption("general", ListValue, "mode", translate("Preferred Mode"))
-mode:value("all", translate("Auto (LTE>UMTS>GPS)"))
+mode:value("all", translate("Auto (LTE>UMTS>GSM)"))
 mode:value("lte", translate("LTE only"))
 mode:value("umts", translate("UMTS only"))
-mode:value("gsm", translate("GPRS only"))
+mode:value("gsm", translate("GSM only"))
 mode.default = "all"
 
 local simman = map.uci:get("simman", "core", "enabled") or "0"
