@@ -333,32 +333,32 @@
 
 			if (e = document.getElementById('memtotal'))
 				e.innerHTML = progressbar(
-					((info.memory.free + info.memory.buffered) / 1024) + " <%:kB%>",
-					(info.memory.total / 1024) + " <%:kB%>"
+					String.format('%.02f',info.memory.available / 1048576) + " <%:MB%>",
+					String.format('%.02f',info.memory.total / 1048576) + " <%:MB%>"
 				);
 
-			if (e = document.getElementById('memfree'))
+			if (e = document.getElementById('memused'))
 				e.innerHTML = progressbar(
-					(info.memory.free / 1024) + " <%:kB%>",
-					(info.memory.total / 1024) + " <%:kB%>"
+					String.format('%.02f',(info.memory.total - info.memory.free) / 1048576) + " <%:MB%>",
+					String.format('%.02f',info.memory.total / 1048576) + " <%:MB%>"
 				);
 
 			if (e = document.getElementById('membuff'))
 				e.innerHTML = progressbar(
-					(info.memory.buffered / 1024) + " <%:kB%>",
-					(info.memory.total / 1024) + " <%:kB%>"
+					String.format('%.02f',info.memory.buffered / 1048576) + " <%:MB%>",
+					String.format('%.02f',info.memory.total / 1048576) + " <%:MB%>"
 				);
 
-			if (e = document.getElementById('swaptotal'))
+			if (e = document.getElementById('memcached'))
 				e.innerHTML = progressbar(
-					(info.swap.free / 1024) + " <%:kB%>",
-					(info.swap.total / 1024) + " <%:kB%>"
+					String.format('%.02f',info.memory.cached / 1048576) + " <%:MB%>",
+					String.format('%.02f',info.memory.total / 1048576) + " <%:MB%>"
 				);
 
 			if (e = document.getElementById('swapfree'))
 				e.innerHTML = progressbar(
-					(info.swap.free / 1024) + " <%:kB%>",
-					(info.swap.total / 1024) + " <%:kB%>"
+					String.format('%.02f',info.swap.free / 1048576) + " <%:MB%>",
+					String.format('%.02f',info.swap.total / 1048576) + " <%:MB%>"
 				);
 
 			if (e = document.getElementById('conns'))
@@ -393,21 +393,14 @@
 
 	<div class="table" width="100%">
 		<div class="tr"><div class="td left" width="33%"><%:Total Available%></div><div class="td left" id="memtotal">-</div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Free%></div><div class="td left" id="memfree">-</div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Used%></div><div class="td left" id="memused">-</div></div>
 		<div class="tr"><div class="td left" width="33%"><%:Buffered%></div><div class="td left" id="membuff">-</div></div>
+		<div class="tr"><div class="td left" width="33%"><%:Cashed%></div><div class="td left" id="memcached">-</div></div>
+		<% if swapinfo.total > 0 then %>
+			<div class="tr"><div class="td left" width="33%"><%:Swap free%></div><div class="td left" id="swapfree">-</div></div>
+		<% end %>
 	</div>
 </div>
-
-<% if swapinfo.total > 0 then %>
-<div class="cbi-section">
-	<h3><%:Swap%></h3>
-
-	<div class="table" width="100%">
-		<div class="tr"><div class="td left" width="33%"><%:Total Available%></div><div class="td left" id="swaptotal">-</div></div>
-		<div class="tr"><div class="td left" width="33%"><%:Free%></div><div class="td left" id="swapfree">-</div></div>
-	</div>
-</div>
-<% end %>
 
 <div class="cbi-section">
 	<h3><%:Network%></h3>
