@@ -21,7 +21,23 @@ s.addremove = false
 s:tab("general",  translate("General Settings"))
 s:tab("logging",  translate("Logging"))
 s:tab("language", translate("Language and Style"))
+s:tab("zram", translate("ZRam Settings"))
 s:tab("usb", translate("USB Configuration"))
+
+--
+-- ZRam
+--
+
+o = s:taboption("zram", Value, "zram_size_mb", translate("ZRam Size"), translate("Size of the ZRam device in megabytes"))
+o.optional    = true
+o.placeholder = 16
+o.datatype    = "uinteger"
+
+o = s:taboption("zram", ListValue, "zram_comp_algo", translate("ZRam Compression Algorithm"))
+o.nowrite = true
+o.default = "lzo"
+o:value("lzo", "lzo")
+o:value("lz4", "lz4")
 
 --
 -- USB Properties
