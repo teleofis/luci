@@ -16,5 +16,5 @@ $Id: openvpn.lua 7362 2011-08-12 13:16:27Z jow $
 module("luci.controller.strongswan", package.seeall)
 
 function index()
-	entry( {"admin", "services", "ipsec"},  arcombine(cbi("strongswan_add"), cbi("strongswan_edit")), _("IPsec"), 2).leaf=true
+	entry( {"admin", "vpn", "ipsec"},  arcombine(cbi("strongswan_add"), cbi("strongswan_edit")), _("IPsec"), 2).leaf=true
 end

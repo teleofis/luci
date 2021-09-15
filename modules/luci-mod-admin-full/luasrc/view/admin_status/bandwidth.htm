@@ -9,7 +9,7 @@
 	local dev
 	local devices = { }
 	for _, dev in luci.util.vspairs(luci.sys.net.devices()) do
-		if dev ~= "lo" and not ntm:ignore_interface(dev) then
+		if dev ~= "lo" and dev ~= "rmnet_data1" and dev ~= "rmnet_data2" and dev ~= "rmnet_data3" and dev ~= "rmnet_data4" and dev ~= "rmnet_data5" and dev ~= "rmnet_data6" and dev ~= "rmnet_data7" and not ntm:ignore_interface(dev) then
 			devices[#devices+1] = dev
 		end
 	end

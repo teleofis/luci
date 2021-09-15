@@ -9,7 +9,7 @@ local s = m:section( TypedSection, "conn", translate("IPsec Configuration"), tra
 	s.addremove = true
 	s.template = "cbi/tblsection"
 	s.novaluetext = translate("There are no IPsec configurations yet")
-	s.extedit = luci.dispatcher.build_url("admin", "services", "ipsec", "%s")
+	s.extedit = luci.dispatcher.build_url("admin", "vpn", "ipsec", "%s")
 	s.defaults = {enabled = "0"}
 	s.sectionhead = "Name"
 

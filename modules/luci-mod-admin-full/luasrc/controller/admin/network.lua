@@ -11,7 +11,7 @@ function index()
 	page = node("admin", "network")
 	page.target = firstchild()
 	page.title  = _("Network")
-	page.order  = 50
+	page.order  = 30
 	page.index  = true
 
 --	if page.inreq then

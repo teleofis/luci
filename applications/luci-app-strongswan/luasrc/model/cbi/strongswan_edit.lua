@@ -7,7 +7,7 @@ local section_name
 if arg[1] then
 	section_name = arg[1]
 else
-	luci.http.redirect(luci.dispatcher.build_url("admin", "services", "ipsec"))
+	luci.http.redirect(luci.dispatcher.build_url("admin", "vpn", "ipsec"))
 end
 
 local m = Map("ipsec", translate("IPsec"), translate(""))
