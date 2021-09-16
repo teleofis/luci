@@ -34,7 +34,7 @@ i = s:option(DummyValue, "index", translate("Start priority"))
 n = s:option(DummyValue, "name", translate("Initscript"))
 
 
-e = s:option(Button, "endisable", translate("Enable/Disable"))
+e = s:option(Button, "endisable", translate("Enable/Disable"), translate("Enabling/disabling scripts during device startup"))
 
 e.render = function(self, section, scope)
 	if inits[section].enabled then
@@ -61,18 +61,18 @@ e.write = function(self, section)
 end
 
 
-start = s:option(Button, "start", translate("Start"))
+start = s:option(Button, "start", translate("Start"), translate("Start script in current session"))
 start.inputstyle = "apply"
 start.write = function(self, section)
 	handled = true
 	sys.call("/etc/init.d/%s %s >/dev/null" %{ inits[section].name, self.option })
 end
 
-restart = s:option(Button, "restart", translate("Restart"))
+restart = s:option(Button, "restart", translate("Restart"), translate("Restart script"))
 restart.inputstyle = "reload"
 restart.write = start.write
 
-stop = s:option(Button, "stop", translate("Stop"))
+stop = s:option(Button, "stop", translate("Stop"), translate("Stop script in current session"))
 stop.inputstyle = "remove"
 stop.write = start.write
 

@@ -1,7 +1,7 @@
 local fs  = require "nixio.fs"
 local sys = require "luci.sys"
 
-m = Map("smscontrol", "Remote SMS control", translate("Here you can send commands to router via a call or SMS"))
+m = Map("smscontrol", translate("Remote SMS control"), translate("Here you can send commands to router via a call or SMS"))
 
 n = m:section(NamedSection, "common", "smscontrol")
 
