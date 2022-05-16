@@ -85,11 +85,11 @@ return network.registerProtocol('3g', {
 			}, this));
 		};
 
-		o = s.taboption('general', form.Value, 'service', _('Service Type'));
+		o = s.taboption('general', form.Value, 'modes', _('Service Type'));
 		o.value('', _('-- Please choose --'));
-		o.value('umts', 'UMTS/GPRS');
-		o.value('umts_only', _('UMTS only'));
-		o.value('gprs_only', _('GPRS only'));
+		o.value('all', 'UMTS/GPRS');
+		o.value('umts', _('UMTS only'));
+		o.value('gsm', _('GPRS only'));
 		o.value('evdo', 'CDMA/EV-DO');
 
 		o = s.taboption('general', form.Value, 'apn', _('APN'));
