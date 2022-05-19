@@ -850,7 +850,7 @@ msgstr "應用未核取"
 msgid "Applying configuration changes… %ds"
 msgstr "組態變更套用中… %ds"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "架構"
 
@@ -2612,7 +2612,7 @@ msgstr "防火牆狀況"
 msgid "Firmware File"
 msgstr "韌體檔案"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "韌體版本"
 
@@ -2766,6 +2766,10 @@ msgstr "GHz"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "僅用GPRS"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3026,7 +3030,7 @@ msgstr "Host-Uniq 標籤內容"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3465,6 +3469,10 @@ msgstr "內部憑證制約 (Subject)"
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "內部憑證制約 (萬用字元)"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "安裝延伸協定中..."
@@ -3664,7 +3672,7 @@ msgstr "保留目前設定"
 msgid "Kernel Log"
 msgstr "核心日誌"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "核心版本"
 
@@ -3919,7 +3927,7 @@ msgstr "進入的DNS請求聆聽埠"
 msgid "Load"
 msgstr "負載"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "平均負載"
 
@@ -3982,7 +3990,7 @@ msgstr "僅限本機服務"
 msgid "Local Startup"
 msgstr "本地啟動"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "本地時間"
@@ -4339,7 +4347,7 @@ msgstr "行動網域"
 msgid "Mode"
 msgstr "模式"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "裝置型號"
 
@@ -4497,7 +4505,7 @@ msgstr "NDP 代理從屬裝置"
 msgid "NT Domain"
 msgstr "微軟NT網域"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "候選 NTP 伺服器"
 
@@ -6805,7 +6813,7 @@ msgid "Sync with browser"
 msgstr "與瀏覽器同步時間"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -6866,7 +6874,7 @@ msgstr "表格"
 msgid "Target"
 msgstr "目標"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr ""
 
@@ -7705,17 +7713,13 @@ msgstr ""
 "按下「繼續」，ifname 選項將被重新命名，網路將重新啟動以應用更新後的設定。"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "上線時間"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "採用 <code>/etc/ethers</code>"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "使用 DHCP 通告的伺服器"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8364,6 +8368,10 @@ msgstr "隱藏"
 msgid "hybrid mode"
 msgstr "複合模式"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr "假如目標是某個網路"
@@ -8728,6 +8736,9 @@ msgstr "是"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« 倒退"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "使用 DHCP 通告的伺服器"
 
 #~ msgid "IPv4-Address"
 #~ msgstr "IPv4 位址"

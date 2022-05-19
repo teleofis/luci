@@ -848,7 +848,7 @@ msgstr "Anvend ikke afkrydset"
 msgid "Applying configuration changes… %ds"
 msgstr "Anvendelse af konfigurationsændringer... %ds"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "Arkitektur"
 
@@ -2658,7 +2658,7 @@ msgstr "Firewall-status"
 msgid "Firmware File"
 msgstr "Firmware-fil"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "Firmware-version"
 
@@ -2816,6 +2816,10 @@ msgstr "GHz"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "Kun GPRS"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3079,7 +3083,7 @@ msgstr "Host-Uniq tag indhold"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3530,6 +3534,10 @@ msgstr "Indre certifikatbegrænsning (emne)"
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "Indre certifikatbegrænsning (Wildcard)"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "Installer protokoludvidelser..."
@@ -3736,7 +3744,7 @@ msgstr "Bevar indstillingerne og den aktuelle konfiguration"
 msgid "Kernel Log"
 msgstr "Kernelog"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "Kerneversion"
 
@@ -3997,7 +4005,7 @@ msgstr ""
 msgid "Load"
 msgstr "Læs"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "Gennemsnitlig belastning"
 
@@ -4060,7 +4068,7 @@ msgstr ""
 msgid "Local Startup"
 msgstr "Lokal opstart"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "Lokal tid"
@@ -4422,7 +4430,7 @@ msgstr "Mobilitetsdomæne"
 msgid "Mode"
 msgstr "Mode"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "Model"
 
@@ -4584,7 +4592,7 @@ msgstr "NDP-Proxy-slave"
 msgid "NT Domain"
 msgstr "NT-domæne"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "Kandidater til NTP-server"
 
@@ -6981,7 +6989,7 @@ msgid "Sync with browser"
 msgstr "Synkroniser med browser"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -7042,7 +7050,7 @@ msgstr "Tabel"
 msgid "Target"
 msgstr "Mål"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr "Målplatform"
 
@@ -7936,17 +7944,13 @@ msgstr ""
 "genstartes for at anvende den opdaterede konfiguration."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "Oppetid"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "Brug <code>/etc/ethers</code>"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "Brug DHCP-annoncerede servere"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8618,6 +8622,10 @@ msgstr "skjult"
 msgid "hybrid mode"
 msgstr "hybridtilstand"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr ""
@@ -8982,3 +8990,6 @@ msgstr "ja"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« Tilbage"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "Brug DHCP-annoncerede servere"

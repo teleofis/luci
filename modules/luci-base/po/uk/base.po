@@ -880,7 +880,7 @@ msgstr "Застосувати без перевірки"
 msgid "Applying configuration changes… %ds"
 msgstr "Очікування на застосування конфігурації… %d c"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "Архітектура"
 
@@ -2692,7 +2692,7 @@ msgstr "Стан брандмауера"
 msgid "Firmware File"
 msgstr "Файл мікропрограми"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "Версія прошивки"
 
@@ -2841,6 +2841,10 @@ msgstr "Ггц"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "Тільки GPRS"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3107,7 +3111,7 @@ msgstr "Зміст тегу Host-Uniq"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3556,6 +3560,10 @@ msgstr "Внутрішнє обмеження сертифіката (Суб'є�
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "Внутрішнє обмеження сертифіката (Шаблон)"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "Інсталяція розширень протоколу..."
@@ -3762,7 +3770,7 @@ msgstr "Зберегти налаштування та поточну конфі
 msgid "Kernel Log"
 msgstr "Журнал ядра"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "Версія ядра"
 
@@ -4035,7 +4043,7 @@ msgstr "Порт прослуховування для вхідних DNS-зап
 msgid "Load"
 msgstr "Навантаження"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "Середнє навантаження"
 
@@ -4098,7 +4106,7 @@ msgstr "Тільки локальна служба"
 msgid "Local Startup"
 msgstr "Локальний запуск"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "Місцевий час"
@@ -4459,7 +4467,7 @@ msgstr "Домен мобільності"
 msgid "Mode"
 msgstr "Режим"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "Модель"
 
@@ -4619,7 +4627,7 @@ msgstr ""
 msgid "NT Domain"
 msgstr "Домен NT"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "Сервери NTP – кандидати для синхронізації"
 
@@ -6963,7 +6971,7 @@ msgid "Sync with browser"
 msgstr "Синхронізувати з браузером"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -7024,7 +7032,7 @@ msgstr "Таблиця"
 msgid "Target"
 msgstr "Ціль"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr ""
 
@@ -7881,17 +7889,13 @@ msgid ""
 msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "Час безвідмовної роботи"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "Використовувати <code>/etc/ethers</code>"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "Використовувати сервери, оголошені DHCP"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8560,6 +8564,10 @@ msgstr "приховано"
 msgid "hybrid mode"
 msgstr "гібридний режим"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr "якщо ціль — мережа"
@@ -8926,6 +8934,9 @@ msgstr "так"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« Назад"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "Використовувати сервери, оголошені DHCP"
 
 #~ msgid "Enable promiscious mode"
 #~ msgstr "Увімкнути нерозбірливий (promiscious) режим"

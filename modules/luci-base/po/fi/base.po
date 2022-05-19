@@ -860,7 +860,7 @@ msgstr "Käytä valitsematonta"
 msgid "Applying configuration changes… %ds"
 msgstr "Otetaan käyttöön määritysmuutoksia... %ds"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "Arkkitehtuuri"
 
@@ -2659,7 +2659,7 @@ msgstr "Palomuurin tila"
 msgid "Firmware File"
 msgstr "Laiteohjelmisto-tiedosto"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "Laiteohjelmiston versio"
 
@@ -2808,6 +2808,10 @@ msgstr "GHz"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "Vain GPRS"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3070,7 +3074,7 @@ msgstr "Host-Uniq-tunnisteen sisältö"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3512,6 +3516,10 @@ msgstr "Sisäinen varmennerajoitus (Kohde)"
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "Sisäinen varmennerajoitus (jokerimerkki)"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "Asenna protokollalaajennukset..."
@@ -3716,7 +3724,7 @@ msgstr "Säilytä asetukset ja nykyinen kokoonpano"
 msgid "Kernel Log"
 msgstr "Ytimen loki"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "Ytimen versio"
 
@@ -3981,7 +3989,7 @@ msgstr "Saapuvien DNS-kyselyiden kuunteluportti"
 msgid "Load"
 msgstr "Kuormitus"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "Kuormituksen keskiarvo"
 
@@ -4044,7 +4052,7 @@ msgstr "Palvele vain paikallisesti"
 msgid "Local Startup"
 msgstr "Paikallinen käynnistys"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "Paikallinen aika"
@@ -4403,7 +4411,7 @@ msgstr "Liikkuvuusalue"
 msgid "Mode"
 msgstr "Tila"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "Malli"
 
@@ -4565,7 +4573,7 @@ msgstr ""
 msgid "NT Domain"
 msgstr "NT-toimialue"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "NTP-palvelinehdokkaat"
 
@@ -6923,7 +6931,7 @@ msgid "Sync with browser"
 msgstr "Synkronoi selaimen kanssa"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -6984,7 +6992,7 @@ msgstr "Taulukko"
 msgid "Target"
 msgstr "Kohde"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr "Kohdealusta"
 
@@ -7840,17 +7848,13 @@ msgid ""
 msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "Toiminta-aika"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "Käytä <code>/etc/ethers</code>"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "Käytä DHCP-mainostettuja palvelimia"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8521,6 +8525,10 @@ msgstr "piilotettu"
 msgid "hybrid mode"
 msgstr "hybridi-tila"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr "jos kohde on verkko"
@@ -8887,6 +8895,9 @@ msgstr "kyllä"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "«Takaisin"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "Käytä DHCP-mainostettuja palvelimia"
 
 #~ msgid "IPv4-Address"
 #~ msgstr "IPv4-osoite"

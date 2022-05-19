@@ -868,7 +868,7 @@ msgstr "Zastosuj zmiany"
 msgid "Applying configuration changes… %ds"
 msgstr "Wprowadzanie zmian w konfiguracji… %ds"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "Architektura"
 
@@ -2692,7 +2692,7 @@ msgstr "Status zapory sieciowej"
 msgid "Firmware File"
 msgstr "Plik firmware"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "Wersja firmware"
 
@@ -2852,6 +2852,10 @@ msgstr "GHz"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "Tylko GPRS"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3116,7 +3120,7 @@ msgstr "Zawartość znacznika Host-Uniq"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3567,6 +3571,10 @@ msgstr "Ograniczenie wewnętrznego certyfikatu (temat)"
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "Ograniczenie wewnętrznego certyfikatu (Wildcard)"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "Instaluj rozszerzenia protokołów..."
@@ -3774,7 +3782,7 @@ msgstr "Zachowaj ustawienia i bieżącą konfigurację"
 msgid "Kernel Log"
 msgstr "Log kernela"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "Wersja kernela"
 
@@ -4039,7 +4047,7 @@ msgstr "Port nasłuchu dla przychodzących zapytań DNS"
 msgid "Load"
 msgstr "Obciążenie"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "Średnie obciążenie"
 
@@ -4102,7 +4110,7 @@ msgstr "Tylko serwis lokalny"
 msgid "Local Startup"
 msgstr "Lokalny autostart"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "Czas lokalny"
@@ -4470,7 +4478,7 @@ msgstr "Domena mobilna"
 msgid "Mode"
 msgstr "Tryb"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "Model"
 
@@ -4632,7 +4640,7 @@ msgstr "Podrzędne NDP-Proxy"
 msgid "NT Domain"
 msgstr "Domena NT"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "Lista serwerów NTP"
 
@@ -7046,7 +7054,7 @@ msgid "Sync with browser"
 msgstr "Synchronizuj z przeglądarką"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -7108,7 +7116,7 @@ msgstr "Tablica"
 msgid "Target"
 msgstr "Cel"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr "Platforma docelowa"
 
@@ -8007,17 +8015,13 @@ msgstr ""
 "konfiguracji."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "Czas pracy"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "Użyj <code>/etc/ethers</code>"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "Użyj dedykowanych serwerów DHCP"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8696,6 +8700,10 @@ msgstr "ukryty"
 msgid "hybrid mode"
 msgstr "tryb hybrydowy"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr "jeżeli celem jest sieć"
@@ -9062,6 +9070,9 @@ msgstr "tak"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« Wróć"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "Użyj dedykowanych serwerów DHCP"
 
 #~ msgid "Enable promiscious mode"
 #~ msgstr "Włącz tryb promiscious"

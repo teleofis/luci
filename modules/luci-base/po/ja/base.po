@@ -862,7 +862,7 @@ msgstr "チェックなしの適用"
 msgid "Applying configuration changes… %ds"
 msgstr "設定を適用中… 残り最大%d秒"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
 msgid "Architecture"
 msgstr "アーキテクチャ"
 
@@ -2667,7 +2667,7 @@ msgstr "ファイアウォールステータス"
 msgid "Firmware File"
 msgstr "ファームウェアファイル"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
 msgid "Firmware Version"
 msgstr "ファームウェア バージョン"
 
@@ -2825,6 +2825,10 @@ msgstr "GHz"
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:78
 msgid "GPRS only"
 msgstr "GPRSのみ"
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "GPS Clock Synchronization"
+msgstr ""
 
 #: protocols/luci-proto-gre/htdocs/luci-static/resources/protocol/gre.js:10
 msgid "GRE tunnel over IPv4"
@@ -3090,7 +3094,7 @@ msgstr "Host-Uniqタグコンテンツ"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:37
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:509
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/hosts.js:27
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:53
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:87
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:134
 msgid "Hostname"
@@ -3531,6 +3535,10 @@ msgstr "内部証明書制約（件名）"
 msgid "Inner certificate constraint (Wildcard)"
 msgstr "内部証明書制約（ワイルドカード）"
 
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:66
+msgid "Input Voltage"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:300
 msgid "Install protocol extensions..."
 msgstr "プロトコル拡張機能をインストール..."
@@ -3736,7 +3744,7 @@ msgstr "現在の設定を残す"
 msgid "Kernel Log"
 msgstr "カーネルログ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:58
 msgid "Kernel Version"
 msgstr "カーネル バージョン"
 
@@ -4001,7 +4009,7 @@ msgstr "受信DNSクエリをリッスンするポート"
 msgid "Load"
 msgstr "負荷"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:62
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
 msgid "Load Average"
 msgstr "システム平均負荷"
 
@@ -4064,7 +4072,7 @@ msgstr "ローカルサービスのみ"
 msgid "Local Startup"
 msgstr "ローカルスタートアップ"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:59
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:130
 msgid "Local Time"
 msgstr "時刻"
@@ -4423,7 +4431,7 @@ msgstr "モビリティドメイン"
 msgid "Mode"
 msgstr "モード"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:55
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:54
 msgid "Model"
 msgstr "モデル"
 
@@ -4586,7 +4594,7 @@ msgstr ""
 msgid "NT Domain"
 msgstr "NTドメイン"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:289
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:288
 msgid "NTP server candidates"
 msgstr "NTPサーバー候補"
 
@@ -6957,7 +6965,7 @@ msgid "Sync with browser"
 msgstr "ブラウザと同期"
 
 #: modules/luci-base/root/usr/share/luci/menu.d/luci-base.json:26
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:17
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:22
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:112
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:3
 msgid "System"
@@ -7018,7 +7026,7 @@ msgstr "テーブル"
 msgid "Target"
 msgstr "ターゲット"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:57
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Target Platform"
 msgstr "ターゲット プラットフォーム"
 
@@ -7871,17 +7879,13 @@ msgid ""
 msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:82
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:61
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:60
 msgid "Uptime"
 msgstr "稼働時間"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:266
 msgid "Use <code>/etc/ethers</code>"
 msgstr "<code>/etc/ethers</code>を使用"
-
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
-msgid "Use DHCP advertised servers"
-msgstr "DHCPから通知されたサーバを使用"
 
 #: protocols/luci-proto-relay/htdocs/luci-static/resources/protocol/relay.js:167
 msgid "Use DHCP gateway"
@@ -8550,6 +8554,10 @@ msgstr "（非表示）"
 msgid "hybrid mode"
 msgstr "ハイブリッドモード"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:284
+msgid "if possible"
+msgstr ""
+
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:41
 msgid "if target is a network"
 msgstr "ターゲットがネットワークの場合"
@@ -8914,6 +8922,9 @@ msgstr "はい"
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« 戻る"
+
+#~ msgid "Use DHCP advertised servers"
+#~ msgstr "DHCPから通知されたサーバを使用"
 
 #~ msgid "Enable promiscious mode"
 #~ msgstr "プロミスキャス モードを有効化"
