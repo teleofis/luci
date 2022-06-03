@@ -106,9 +106,21 @@ return network.registerProtocol('3g', {
 		o = s.taboption('general', form.Value, 'pincode', _('PIN'));
 		o.datatype = 'and(uinteger,minlength(4),maxlength(8))';
 
-		s.taboption('general', form.Value, 'username', _('PAP/CHAP username'));
+		o = s.taboption('general', form.ListValue, 'auth', _('Authentication Type'));
+		o.value('pap', 'PAP');
+		o.value('chap', 'CHAP');
+		o.value('none', 'NONE');
+		o.default = 'none';
+
+		o = s.taboption('general', form.Value, 'username', _('PAP/CHAP username'));
+		o.depends('auth', 'pap');
+		o.depends('auth', 'chap');
+		o.depends('auth', 'both');
 
 		o = s.taboption('general', form.Value, 'password', _('PAP/CHAP password'));
+		o.depends('auth', 'pap');
+		o.depends('auth', 'chap');
+		o.depends('auth', 'both');
 		o.password = true;
 
 		o = s.taboption('general', form.Value, 'dialnumber', _('Dial number'));
