@@ -591,8 +591,8 @@
 			while ((req = batch.shift()) != null)
 				if (Array.isArray(json) && json.length)
 					req[2].call(reqopt, reply.clone(json.shift()));
-				else
-					req[1].call(reqopt, new Error('No related RPC reply'));
+				// else
+				// 	req[1].call(reqopt, new Error('No related RPC reply'));
 		}).catch(function(error) {
 			var req = null;
 
