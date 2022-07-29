@@ -62,9 +62,13 @@ return baseclass.extend({
 				systeminfo.load[0] / 65535.0,
 				systeminfo.load[1] / 65535.0,
 				systeminfo.load[2] / 65535.0
-			) : null,
-			_('Input Voltage'),    '%.2f V'.format(custinfo.voltage / 1000.0)
+			) : null
 		];
+
+		if (custinfo.voltage != null) {
+			fields.push(_('Input Voltage'));
+			fields.push('%.2f V'.format(custinfo.voltage / 1000.0));
+		}
 
 		var table = E('table', { 'class': 'table' });
 
