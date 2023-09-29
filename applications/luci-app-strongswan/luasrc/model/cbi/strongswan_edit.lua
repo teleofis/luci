@@ -144,7 +144,6 @@ remip = s:option(DynamicList, "rightsubnet", translate("Remote IP address/Subnet
 		for i, v in ipairs(value) do
 			local remote = luci.ip.IPv4(v)
 			local ip = m.uci:get("network", "lan", "ipaddr")
-			lan = luci.ip.IPv4(ip)
 			if remote ~= nil then
 				local address = v:gsub("/.+","")
 				local networkip = tostring(luci.util.exec(string.format("ipcalc.sh %s |grep NETWORK= | cut -d'=' -f2 | tr -d ''", v)))
