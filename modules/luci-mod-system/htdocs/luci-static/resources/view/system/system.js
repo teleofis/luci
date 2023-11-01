@@ -83,7 +83,7 @@ CBILocalTime = form.DummyValue.extend({
 				this.ntpd_support ? E('button', {
 					'class': 'cbi-button cbi-button-apply',
 					'click': ui.createHandlerFn(this, function() {
-						return callInitAction('sysntpd', 'restart');
+						return callInitAction('ntpd', 'restart');
 					}),
 					'disabled': (this.readonly != null) ? this.readonly : this.map.readonly
 				}, _('Sync with NTP-Server')) : ''
@@ -95,7 +95,7 @@ CBILocalTime = form.DummyValue.extend({
 return view.extend({
 	load: function() {
 		return Promise.all([
-			callInitList('sysntpd'),
+			callInitList('ntpd'),
 			callTimezone(),
 			callGetLocaltime(),
 			uci.load('luci'),
@@ -271,7 +271,7 @@ return view.extend({
 				else
 					uci.unset('system', 'ntp', 'enabled');
 
-				return callInitAction('sysntpd', 'enable');
+				return callInitAction('ntpd', 'enable');
 			};
 			o.load = function(section_id) {
 				return (ntpd_enabled == 1 &&
@@ -283,18 +283,8 @@ return view.extend({
 			o.ucisection = 'ntp';
 			o.depends('enabled', '1');
 
-			o = s.taboption('timesync', widgets.NetworkSelect, 'interface',
-				_('Bind NTP server'),
-				_('Provide the NTP server to the selected interface or, if unspecified, to all interfaces'));
+			o = s.taboption('timesync', form.Flag, 'use_gps', _('GPS Clock Synchronization'),_('if possible'));
 			o.ucisection = 'ntp';
-			o.depends('enable_server', '1');
-			o.multiple = false;
-			o.nocreate = true;
-			o.optional = true;
-
-			o = s.taboption('timesync', form.Flag, 'use_dhcp', _('Use DHCP advertised servers'));
-			o.ucisection = 'ntp';
-			o.default = o.enabled;
 			o.depends('enabled', '1');
 
 			o = s.taboption('timesync', form.DynamicList, 'server', _('NTP server candidates'));
