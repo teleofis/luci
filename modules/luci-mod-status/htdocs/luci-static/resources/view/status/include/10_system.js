@@ -13,6 +13,11 @@ var callSystemInfo = rpc.declare({
 	method: 'info'
 });
 
+var callSystemCust = rpc.declare({
+	object: 'info',
+	method: 'info'
+});
+
 return baseclass.extend({
 	title: _('System'),
 
@@ -20,20 +25,14 @@ return baseclass.extend({
 		return Promise.all([
 			L.resolveDefault(callSystemBoard(), {}),
 			L.resolveDefault(callSystemInfo(), {}),
-			fs.lines('/usr/lib/lua/luci/version.lua')
+			L.resolveDefault(callSystemCust(), {}),
 		]);
 	},
 
 	render: function(data) {
 		var boardinfo   = data[0],
 		    systeminfo  = data[1],
-		    luciversion = data[2];
-
-		luciversion = luciversion.filter(function(l) {
-			return l.match(/^\s*(luciname|luciversion)\s*=/);
-		}).map(function(l) {
-			return l.replace(/^\s*\w+\s*=\s*['"]([^'"]+)['"].*$/, '$1');
-		}).join(' ');
+		    custinfo    = data[2];
 
 		var datestr = null;
 
@@ -55,7 +54,7 @@ return baseclass.extend({
 			_('Model'),            boardinfo.model,
 			_('Architecture'),     boardinfo.system,
 			_('Target Platform'),  (L.isObject(boardinfo.release) ? boardinfo.release.target : ''),
-			_('Firmware Version'), (L.isObject(boardinfo.release) ? boardinfo.release.description + ' / ' : '') + (luciversion || ''),
+			_('Firmware Version'), (L.isObject(boardinfo.release) ? boardinfo.release.description : ''),
 			_('Kernel Version'),   boardinfo.kernel,
 			_('Local Time'),       datestr,
 			_('Uptime'),           systeminfo.uptime ? '%t'.format(systeminfo.uptime) : null,
@@ -65,6 +64,11 @@ return baseclass.extend({
 				systeminfo.load[2] / 65535.0
 			) : null
 		];
+
+		if (custinfo.voltage != null) {
+			fields.push(_('Input Voltage'));
+			fields.push('%.2f V'.format(custinfo.voltage / 1000.0));
+		}
 
 		var table = E('table', { 'class': 'table' });
 
