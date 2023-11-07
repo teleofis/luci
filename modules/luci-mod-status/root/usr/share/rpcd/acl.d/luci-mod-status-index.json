@@ -10,7 +10,8 @@
 			},
 			"ubus": {
 				"file": [ "list", "read" ],
-				"system": [ "board", "info" ]
+				"system": [ "board", "info" ],
+				"info": [ "info" ]
 			}
 		},
 		"write": {

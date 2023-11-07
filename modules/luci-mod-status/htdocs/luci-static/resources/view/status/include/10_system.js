@@ -64,10 +64,17 @@ return baseclass.extend({
 				systeminfo.load[2] / 65535.0
 			) : null
 		];
-
+		if (custinfo.svfw != null) {
+			fields.push(_('Supervisor'));
+			fields.push('fw:%04d (bl:%04d)'.format(custinfo.svfw,custinfo.svfw));
+		}
 		if (custinfo.voltage != null) {
 			fields.push(_('Input Voltage'));
 			fields.push('%.2f V'.format(custinfo.voltage / 1000.0));
+		}
+		if (custinfo.temperature != null) {
+			fields.push(_('Temperature'));
+			fields.push(custinfo.temperature);
 		}
 
 		var table = E('table', { 'class': 'table' });
