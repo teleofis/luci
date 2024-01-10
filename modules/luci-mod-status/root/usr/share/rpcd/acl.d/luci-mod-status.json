@@ -35,7 +35,8 @@
 				"/sbin/logread": [ "stat" ],
 				"/sbin/logread -e ^": [ "exec" ],
 				"/usr/sbin/logread": [ "stat" ],
-				"/usr/sbin/logread -e ^": [ "exec" ]
+				"/usr/sbin/logread -e ^": [ "exec" ],
+				"/etc/event_log": [ "read" ]
 			},
 			"ubus": {
 				"file": [ "stat" ]
