@@ -56,6 +56,15 @@ dns:depends("peerdns", "")
 dns.datatype = "ipaddr"
 dns.cast     = "string"
 
+route = section:taboption("advanced", Value, "route", translate("Add route"))
+route.datatype = "ipaddr"
+route.placeholder  = "192.168.10.0/24"
+
+checkup_interval = section:taboption("advanced", Value, "checkup_interval", translate("Checkup interval"))
+checkup_interval.placeholder = "0"
+checkup_interval.datatype    = "uinteger"
+checkup_interval.default     = "30"
+
 keepalive_failure = section:taboption("advanced", Value, "_keepalive_failure",
 	translate("LCP echo failure threshold"),
 	translate("Presume peer to be dead after given amount of LCP echo failures, use 0 to ignore failures"))

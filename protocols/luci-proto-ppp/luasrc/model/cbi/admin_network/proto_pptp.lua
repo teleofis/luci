@@ -48,6 +48,9 @@ dns:depends("peerdns", "")
 dns.datatype = "ipaddr"
 dns.cast     = "string"
 
+route = section:taboption("advanced", Value, "route", translate("Add route"))
+route.datatype = "ipaddr"
+route.placeholder  = "192.168.10.0/24"
 
 keepalive_failure = section:taboption("advanced", Value, "_keepalive_failure",
 	translate("LCP echo failure threshold"),
