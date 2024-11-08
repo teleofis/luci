@@ -66,7 +66,7 @@ return baseclass.extend({
 		];
 		if (custinfo.svfw != null) {
 			fields.push(_('Supervisor'));
-			fields.push('fw:%04d (bl:%04d)'.format(custinfo.svfw,custinfo.svfw));
+			fields.push('fw: %s (bl: %s)'.format(custinfo.svfw,custinfo.blfw));
 		}
 		if (custinfo.voltage != null) {
 			fields.push(_('Input Voltage'));

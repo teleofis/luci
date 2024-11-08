@@ -2983,6 +2983,9 @@ msgstr "Ethernet-адаптер"
 msgid "Ethernet Switch"
 msgstr "Ethernet-коммутатор"
 
+msgid "Events Log"
+msgstr "Журнал событий"
+
 #: protocols/luci-proto-bonding/htdocs/luci-static/resources/protocol/bonding.js:272
 msgid "Every 30 seconds (slow, 0)"
 msgstr "Каждые 30 секунд (slow, 0)"
@@ -10898,3 +10901,12 @@ msgstr ""
 
 msgid "List of domains to force to an IP address."
 msgstr "Список доменов для принудительного преобразования в IP-адрес."
+
+msgid "Supervisor"
+msgstr "Супервизор"
+
+msgid "Input Voltage"
+msgstr "Входное напряжение"
+
+msgid "Temperature"
+msgstr "Температура"
