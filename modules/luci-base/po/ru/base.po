@@ -4074,7 +4074,7 @@ msgstr "Только IPv6"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1045
 msgid "IPv6 preference"
-msgstr "IPv6 привелегии"
+msgstr "IPv6 привилегии"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/6rd.js:53
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/map.js:59
