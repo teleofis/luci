@@ -32,11 +32,11 @@ msgstr "Дополнительные настройки"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:401
 msgid "Allow non-public IP's"
-msgstr "Разрешить непубличные IP-адреса"
+msgstr "Разрешить необщедоступные IP-адреса"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:608
 msgid "Basic Settings"
-msgstr "Основные настройки"
+msgstr "Базовые настройки"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:888
 msgid "Bind Network"
@@ -72,15 +72,15 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:452
 msgid "Ca Certs path"
-msgstr "Путь к сертификатам CA"
+msgstr "Путь к CA Certs"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:453
 msgid ""
 "Ca Certs path that will be used to download services data. Set IGNORE to "
 "skip certificate validation."
 msgstr ""
-"Путь к сертификатам CA, которые будут использоваться для загрузки данных "
-"сервисов. Установите IGNORE, чтобы пропустить проверку сертификата."
+"Путь к CA-сертификатам, используемым для загрузки данных служб. Установите "
+"значение IGNORE, чтобы пропустить проверку сертификатов."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:541
 msgid "Cancel"
@@ -88,11 +88,11 @@ msgstr "Отмена"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:966
 msgid "Check Interval"
-msgstr "Период проверки"
+msgstr "Интервал проверки"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:981
 msgid "Check Unit"
-msgstr "Элемент проверки"
+msgstr "Единица измерения интервала"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:526
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:660
@@ -114,7 +114,7 @@ msgstr "Создать службу"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:414
 msgid "Current setting:"
-msgstr "Текущие настройки:"
+msgstr "Текущий формат: "
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:198
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:276
@@ -126,7 +126,7 @@ msgstr ""
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:723
 msgid "Custom update script to be used for updating your DDNS Provider."
 msgstr ""
-"Пользовательский скрипт обновления, который будет использоваться для вашего "
+"Пользовательский скрипт обновления, используемый для обновления данных вашего "
 "провайдера DDNS."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:703
@@ -140,17 +140,17 @@ msgstr "Пользовательский скрипт обновления"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:196
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:279
 msgid "DDNS Autostart disabled"
-msgstr "Автозапуск DDNS отключен"
+msgstr "DDNS Autostart disabled"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:195
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:279
 msgid "DDNS Autostart enabled"
-msgstr "Автозапуск DDNS включён"
+msgstr "DDNS Autostart enabled"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:520
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:642
 msgid "DDNS Service provider"
-msgstr "Провайдер службы DDNS"
+msgstr "Провайдер DDNS-услуг"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:284
 msgid "DDns"
@@ -166,7 +166,7 @@ msgstr "Запросы DNS по протоколу TCP не поддержива
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:909
 msgid "DNS-Server"
-msgstr "Сервер DNS"
+msgstr "DNS-Server"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:410
 msgid "Date format"
@@ -182,31 +182,29 @@ msgstr "Определяет интерфейс для чтения систем
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:830
 msgid "Defines the network to read systems IP-Address from"
-msgstr "Определяет сеть для считывания системного IP-адреса"
+msgstr "Определяет сеть, из которой будет считываться IP-адрес системы."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:792
 msgid ""
 "Defines the source to read systems IP-Address from, that will be send to the "
 "DDNS provider"
 msgstr ""
-"Определяет источник для чтения системного IP-адреса, который будет "
-"отправляться провайдеру DDNS"
+"Определяет источник, из которого будет считываться IP-адрес системы, "
+"отправляемый провайдеру DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:512
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:632
 msgid "Defines which IP address 'IPv4/IPv6' is send to the DDNS provider"
-msgstr "Определяет, который IP-адрес 'IPv4/IPv6' отправляется провайдеру DDNS"
+msgstr "Определяет, какой IP-адрес (IPv4/IPv6) отправляется провайдеру DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:426
 msgid "Directory contains Log files for each running section."
-msgstr "Каталог, содержащий файлы журналов для каждой запущенной службы."
+msgstr "Директория содержит файлы логов для каждого работающего раздела."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:420
 msgid ""
 "Directory contains PID and other status information for each running section."
-msgstr ""
-"Каталог, содержащий PID-файлы и другую информацию о состоянии каждой "
-"запущенной службы."
+"Директория содержит PID и другую информацию о состоянии для каждого работающего раздела."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:17
 msgid "Disabled"
@@ -220,11 +218,11 @@ msgstr "Домен"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/status/include/70_ddns.js:7
 #: applications/luci-app-ddns/root/usr/share/luci/menu.d/luci-app-ddns.json:3
 msgid "Dynamic DNS"
-msgstr "Динамический DNS"
+msgstr "Dynamic DNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:267
 msgid "Dynamic DNS Version"
-msgstr "Версия DDNS"
+msgstr "Dynamic DNS Version"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:554
 msgid "Edit"
@@ -237,7 +235,7 @@ msgstr "Включить безопасное соединение с прова
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:614
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1134
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Активировать"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:951
 msgid "Error"
@@ -245,11 +243,11 @@ msgstr "Ошибка"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1026
 msgid "Error Retry Counter"
-msgstr "Счётчик попыток повтора при ошибке"
+msgstr "Счётчик попыток при ошибке"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1036
 msgid "Error Retry Interval"
-msgstr "Интервал попытки повтора при ошибке"
+msgstr "Интервал между попытками при ошибке"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:862
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:871
@@ -271,15 +269,15 @@ msgstr "Файл"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:706
 msgid "Follow instructions you will find on their WEB page."
 msgstr ""
-"Следуйте инструкциям, которые вы найдете в документации провайдера DDNS."
+"Следуйте инструкциям, размещенным на их веб-странице."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:412
 msgid "For supported codes look here"
-msgstr "С поддерживаемыми кодами вы можете ознакомится здесь"
+msgstr "Для поддерживаемых форматов см. здесь"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:900
 msgid "Force IP Version"
-msgstr "Назначенная версия протокола IP"
+msgstr "Принудительная версия IP"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:358
 msgid "Force IP Version not supported"
@@ -287,11 +285,11 @@ msgstr "Назначенная версия протокола IP не подд�
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:990
 msgid "Force Interval"
-msgstr "Назначить интервал"
+msgstr "Принудительный интервал"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:921
 msgid "Force TCP on DNS"
-msgstr "Использовать протокол TCP для DNS"
+msgstr "Использовать TCP для DNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1016
 msgid "Force Unit"
@@ -303,7 +301,7 @@ msgstr "Формат"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:912
 msgid "Format: IP or FQDN"
-msgstr "В виде: IP-адрес или полное доменное имя"
+msgstr "Формат: IP-адрес или FQDN"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:337
 msgid ""
@@ -328,12 +326,12 @@ msgstr "HTTPS не поддерживается"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:624
 msgid "Hostname/FQDN to validate, if IP update happen or necessary"
 msgstr ""
-"Имя хоста/полное доменное имя для проверки, если IP-адрес изменяется или "
-"есть необходимость"
+"Имя хоста или FQDN, которое необходимо проверить при обновлении IP-адреса или "
+"при необходимости"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:791
 msgid "IP address source"
-msgstr "IP-адрес источника"
+msgstr "Источник IP-адреса"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:511
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:631
@@ -373,7 +371,7 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:615
 msgid "If this service section is disabled it could not be started."
-msgstr "Если служба отключена, её нельзя будет запустить."
+msgstr "Если этот раздел службы отключен, он не может быть запущен "
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:393
 msgid "If using secure communication you should verify server certificates!"
@@ -422,15 +420,15 @@ msgstr "Интерфейс"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:991
 msgid "Interval to force updates send to DDNS Provider"
-msgstr "Интервал для отправки обновлений провайдеру DDNS"
+msgstr "Интервал, через который принудительно отправляются обновления провайдеру DDNS."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:982
 msgid "Interval unit to check for changed IP"
-msgstr "Размерность интервала проверки изменений IP-адреса"
+msgstr "Единица измерения интервала для проверки изменения IP-адреса"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1017
 msgid "Interval unit to force updates sent to DDNS Provider."
-msgstr "Размерность интервала отправки обновлений провайдеру DDNS."
+msgstr "Единица измерения интервала для принудительной отправки обновлений провайдеру DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1139
 msgid "Last Update"
@@ -438,19 +436,19 @@ msgstr "Последнее обновление"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:611
 msgid "Log File Viewer"
-msgstr "Просмотр файла журнала"
+msgstr "Просмотрщик файла лога"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:425
 msgid "Log directory"
-msgstr "Каталог журнала"
+msgstr "Директория логов"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:437
 msgid "Log length"
-msgstr "Просмотр журнала"
+msgstr "Длина лога"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:954
 msgid "Log to file"
-msgstr "Запись в файл"
+msgstr "Записывать лог в файл"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:942
 msgid "Log to syslog"
@@ -485,7 +483,7 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:617
 msgid "Neither from LuCI interface nor from console."
-msgstr "Ни из веб-интерфейса LuCI, ни из консоли."
+msgstr "ни через интерфейс LuCI, ни из консоли."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:795
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:829
@@ -529,12 +527,12 @@ msgstr "Отключить журналирование"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:402
 msgid "Non-public and by default blocked IP's"
-msgstr "Непубличные и заблокированные по умолчанию IP-адреса"
+msgstr "Необщедоступные и по умолчанию заблокированные IP-адреса"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:218
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1108
 msgid "Not Running"
-msgstr "Не работает"
+msgstr "Not Running"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:949
 msgid "Notice"
@@ -542,17 +540,17 @@ msgstr "Уведомление"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:438
 msgid "Number of last lines stored in log files"
-msgstr "Число последних строк, для хранения в журнале"
+msgstr "Количество последних строк, сохраняемых в файлах лога"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:901
 msgid "OPTIONAL: Force the usage of pure IPv4/IPv6 only communication."
-msgstr "Необязательно: использовать исключительно одну из версий IPv4/IPv6."
+msgstr "ОПЦИОНАЛЬНО: Принудительно использовать только IPv4 или только IPv6"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:922
 msgid "OPTIONAL: Force the use of TCP instead of default UDP on DNS requests."
 msgstr ""
-"Необязательно: использовать протокол TCP вместо UDP по умолчанию для DNS-"
-"запросов."
+"ОПЦИОНАЛЬНО: Принудительно использовать TCP вместо стандартного UDP при DNS-"
+"запросах."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:889
 msgid "OPTIONAL: Network to use for communication"
@@ -560,23 +558,23 @@ msgstr "Необязательно: сеть для связи"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:931
 msgid "OPTIONAL: Proxy-Server for detection and updates."
-msgstr "Необязательно: прокси-сервер для обнаружения и обновления."
+msgstr "ОПЦИОНАЛЬНО: Прокси-сервер для обнаружения и обновлений."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:910
 msgid "OPTIONAL: Use non-default DNS-Server to detect 'Registered IP'."
 msgstr ""
-"Необязательно: использовать особый DNS-сервер для обнаружения "
-"'Зарегистрированного IP-адреса'."
+"ОПЦИОНАЛЬНО: Использовать нестандартный DNS-сервер для определения «Зарегистрированного IP»."
+""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1027
 msgid "On Error the script will stop execution after given number of retrys."
 msgstr ""
-"При ошибке скрипт остановит выполнение после заданного количества повторных "
+"При ошибке скрипт прекратит выполнение после указанного количества "
 "попыток."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:758
 msgid "Optional Encoded Parameter"
-msgstr "Необязательный кодированный параметр"
+msgstr "Необязательный закодированный параметр"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:764
 msgid "Optional Parameter"
@@ -584,15 +582,15 @@ msgstr "Необязательный параметр"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:759
 msgid "Optional: Replaces [PARAMENC] in Update-URL (URL-encoded)"
-msgstr "Необязательно: заменяет [PARAMENC] в Update-URL (URL-encoded)"
+msgstr "Необязательно: заменяет [PARAMENC] в URL обновления (с кодировкой URL)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:765
 msgid "Optional: Replaces [PARAMOPT] in Update-URL (NOT URL-encoded)"
-msgstr "Необязательно: заменяет [PARAMOPT] в Update-URL (не URL-encoded)"
+msgstr "Необязательно: заменяет [PARAMOPT] в URL обновления (без кодировки URL)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:930
 msgid "PROXY-Server"
-msgstr "Прокси-сервер"
+msgstr "PROXY-Server"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:751
 msgid "Password"
@@ -624,11 +622,11 @@ msgstr "Действительно переключить службу?"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1122
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/status/include/70_ddns.js:30
 msgid "Registered IP"
-msgstr "Зарегистрированный IP-адрес"
+msgstr "Зарегистрированный IP"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:576
 msgid "Reload"
-msgstr "Перезагрузить"
+msgstr "Reload"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:559
 msgid "Reload this service"
@@ -636,23 +634,23 @@ msgstr "Перезагрузить данную службу"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:740
 msgid "Replaces [DOMAIN] in Update-URL (URL-encoded)"
-msgstr "Заменяет [DOMAIN] в Update-URL (URL-encoded)"
+msgstr "Заменяет [DOMAIN] в URL обновления (с кодировкой URL)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:752
 msgid "Replaces [PASSWORD] in Update-URL (URL-encoded)"
-msgstr "Заменяет [PASSWORD] в Update-URL (URL-encoded)"
+msgstr "Заменяет [PASSWORD] в URL обновления (с кодировкой URL)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:746
 msgid "Replaces [USERNAME] in Update-URL (URL-encoded)"
-msgstr "Заменяет [USERNAME] в Update-URL (URL-encoded)"
+msgstr "Заменяет [USERNAME] в URL обновления (с кодировкой URL)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:290
 msgid "Restart DDns"
-msgstr "Перезапустить DDNS"
+msgstr "Restart DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1044
 msgid "Retry Unit"
-msgstr "Размерность интервалов повтора"
+msgstr "Единица интервала повтора"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:16
 msgid "Run once"
@@ -694,11 +692,11 @@ msgstr "URL файла поддержки служб"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:294
 msgid "Services list last update"
-msgstr "Последнее обновление списка служб"
+msgstr "Последнее обновление"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:993
 msgid "Setting this parameter to 0 will force the script to only run once"
-msgstr "Установка значения 0 заставит сценарий отработать только один раз"
+msgstr "Установка этого параметра в 0 заставит скрипт выполниться только один раз."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:190
 msgid "Start DDNS"
@@ -722,7 +720,7 @@ msgstr "Остановить"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:190
 msgid "Stop DDNS"
-msgstr "Остановить DDNS"
+msgstr "Stop DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:564
 msgid "Stop this service"
@@ -730,7 +728,7 @@ msgstr "Остановить эту службу"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:18
 msgid "Stopped"
-msgstr "Остановлена"
+msgstr "Stopped"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:689
 msgid "Switch service"
@@ -738,11 +736,11 @@ msgstr "Переключить службу"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1029
 msgid "The default setting of '0' will retry infinitely."
-msgstr "Значение по умолчанию '0' используется для бесконечного повтора."
+msgstr "Значение по умолчанию «0» означает бесконечные попытки повтора."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1037
 msgid "The interval between which each succesive retry will commence."
-msgstr "Интервал между последовательными попытками."
+msgstr "Интервал между последовательными попытками повтора"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:505
 msgid "The service name is already used"
@@ -771,7 +769,7 @@ msgstr "Будет выполнена автоматическая настро�
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:610
 msgid "Timer Settings"
-msgstr "Настройка таймера"
+msgstr "Настройки таймера"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:796
 msgid "URL"
@@ -793,14 +791,14 @@ msgstr "Обновить список служб DDNS"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:704
 msgid "Update URL to be used for updating your DDNS Provider."
-msgstr "URL для обновления данных провайдера DDNS."
+msgstr "URL обновления, который необходимо использовать для обновления данных у вашего провайдера DDNS."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:457
 msgid ""
 "Url used to download services file. By default is the master openwrt ddns "
 "package repo."
 msgstr ""
-"URL для загрузки файла служб. По умолчанию используется файл из ветки master "
+URL для загрузки файла служб. По умолчанию используется файл из ветки master "
 "основного репозитория пакетов OpenWrt."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:771
@@ -841,14 +839,14 @@ msgstr "Внимание"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1045
 msgid "Which time units to use for retry counters."
-msgstr "Какие единицы времени использовать для таймера повторных попыток."
+msgstr "Единицы времени, используемые для счётчиков повторов"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:959
 msgid ""
 "Writes detailed messages to log file. File will be truncated automatically."
 msgstr ""
-"Записывать подробные сообщения в файл журнала. Файл будет автоматически "
-"обрезан."
+"Записывает подробные сообщения в файл лога. Файл автоматически "
+"очищается."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:943
 msgid ""
