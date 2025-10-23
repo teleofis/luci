@@ -798,7 +798,7 @@ msgid ""
 "Url used to download services file. By default is the master openwrt ddns "
 "package repo."
 msgstr ""
-URL для загрузки файла служб. По умолчанию используется файл из ветки master "
+"URL для загрузки файла служб. По умолчанию используется файл из ветки master "
 "основного репозитория пакетов OpenWrt."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:771
