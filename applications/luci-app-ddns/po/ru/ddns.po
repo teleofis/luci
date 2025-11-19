@@ -204,6 +204,7 @@ msgstr "Директория содержит файлы логов для ка�
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:420
 msgid ""
 "Directory contains PID and other status information for each running section."
+msgstr ""
 "Директория содержит PID и другую информацию о состоянии для каждого работающего раздела."
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:17
