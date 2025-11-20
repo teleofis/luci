@@ -34,15 +34,15 @@ msgstr "Разрешенные IP-адреса"
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:123
 msgid "Data Received"
-msgstr "Полученные данные"
+msgstr "Получено данных"
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:125
 msgid "Data Transmitted"
-msgstr "Переданные данные"
+msgstr "Передано данных"
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:115
 msgid "Endpoint"
-msgstr "Конечная точка"
+msgstr "Endpoint"
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:106
 msgid "Firewall Mark"
@@ -54,7 +54,7 @@ msgstr "Предоставить доступ к приложению LuCI Wireg
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:121
 msgid "Latest Handshake"
-msgstr "Последнее «рукопожатие» (handshake)"
+msgstr "Последнее подтверждение связи"
 
 #: applications/luci-app-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:104
 msgid "Listen Port"
