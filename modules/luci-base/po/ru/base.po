@@ -13701,3 +13701,15 @@ msgstr "{example_nx} возвращает {nxdomain}."
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« Назад"
+
+msgid "Events Log"
+msgstr "Журнал событий"
+
+msgid "Supervisor"
+msgstr "Супервизор"
+
+msgid "Input Voltage"
+msgstr "Входное напряжение"
+
+msgid "Temperature"
+msgstr "Температура"
