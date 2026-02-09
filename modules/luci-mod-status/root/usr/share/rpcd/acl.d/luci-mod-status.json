@@ -32,7 +32,8 @@
 			"cgi-io": [ "exec" ],
 			"file": {
 				"/bin/dmesg -r": [ "exec" ],
-				"/usr/libexec/syslog-wrapper": [ "exec" ]
+				"/usr/libexec/syslog-wrapper": [ "exec" ],
+				"/etc/event_log": [ "read" ]
 			},
 			"ubus": {
 				"file": [ "stat" ]
