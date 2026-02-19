@@ -1,6 +1,7 @@
 {
-        "admin/network/eoip": {
-                "title": "EoIP tunnel",
+        "admin/vpn/eoip": {
+                "title": "EoIP",
+                "order": 90,
                 "action": {
                         "type": "view",
                         "path": "eoip/eoip"

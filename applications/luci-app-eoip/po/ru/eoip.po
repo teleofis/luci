@@ -19,7 +19,7 @@ msgstr "Направление"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:38
 msgid "Destination IP address for connection EoIP."
-msgstr "IP адрес удалённого хоста для соединения с EoIP."
+msgstr "IP-адрес получателя для соединения с EoIP."
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:43
 msgid "Dynamic"
@@ -27,7 +27,7 @@ msgstr "Динамический"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:16
 msgid "Enable tunnel"
-msgstr "Разрешить тунель"
+msgstr "Включить тунель"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:10
 msgid "EoIP - Tunneling"
