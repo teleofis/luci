@@ -14,12 +14,12 @@ msgstr ""
 "X-Generator: Weblate 4.7-dev\n"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:38
-msgid "Destination"
-msgstr "Направление"
+msgid "Destination IP address"
+msgstr "Удаленный IP-адрес"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:38
 msgid "Destination IP address for connection EoIP."
-msgstr "IP-адрес получателя для соединения с EoIP."
+msgstr "Удаленный IP-адрес для соединения с EoIP."
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:43
 msgid "Dynamic"
@@ -27,11 +27,11 @@ msgstr "Динамический"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:16
 msgid "Enable tunnel"
-msgstr "Включить тунель"
+msgstr "Включить туннель"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:10
 msgid "EoIP - Tunneling"
-msgstr "EoIP - Туннелинг"
+msgstr "EoIP - туннелирование"
 
 #: applications/luci-app-eoip/root/usr/share/luci/menu.d/luci-app-eoip.json:3
 msgid "EoIP tunnel"
@@ -46,9 +46,9 @@ msgid ""
 "Here you can configure EoIP tunnel. At current moment it is easiest way to "
 "create stateless tunnel with Mikrotik."
 msgstr ""
-"Здесь вы можете создавать туннели Ethernet, совместимые с туннеленгом "
-"Mikrotik EoIP. В настоящий момент это самый простой способ создать туннель "
-"на базе протокола от Mikrotik."
+"Здесь вы можете создавать туннели Ethernet, совместимые с "
+"MikroTik EoIP. В настоящий момент это самый простой способ создать туннель "
+"на базе протокола от MikroTik."
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:33
 msgid "ID tunnel"
@@ -56,7 +56,7 @@ msgstr "ID туннеля"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:18
 msgid "If you input 0 interface name zeoip0"
-msgstr "Если вы введёте 0 то имя интерфейса будет zeoip0"
+msgstr "Если вы введете 0, то имя интерфейса будет zeoip0"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:43
 msgid ""
@@ -71,11 +71,11 @@ msgstr ""
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:33
 msgid "Indeficator id tunnel"
-msgstr "Индефикатор id тунеля"
+msgstr "Идентификатор туннеля (Tunnel ID). Должен совпадать на обоих концах."
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:18
 msgid "Name interface [zeoip"
-msgstr "Имя интерфейса [zeoip"
+msgstr "Имя интерфейса"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:26
 msgid "Name interface already in used"

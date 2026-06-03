@@ -35,7 +35,7 @@ return view.extend({
 		id.datatype = "and(min(1), integer)";
 		id.default = 1;
 		
-		d = s.option(form.Value, "dst", _("Destination"), _("Destination IP address for connection EoIP."));
+		d = s.option(form.Value, "dst", _("Destination IP address"), _("Destination IP address for connection EoIP."));
 		d.rmempty = false;
 		d.datatype = "ipaddr";
 		d.placeholder = "0.0.0.0";

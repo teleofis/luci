@@ -8,7 +8,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:38
-msgid "Destination"
+msgid "Destination IP address"
 msgstr ""
 
 #: applications/luci-app-eoip/htdocs/luci-static/resources/view/eoip/eoip.js:38
