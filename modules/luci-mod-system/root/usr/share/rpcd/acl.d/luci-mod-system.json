@@ -140,7 +140,10 @@
 				"/proc/mtd": [ "read" ],
 				"/proc/partitions": [ "read" ],
 				"/proc/sys/kernel/hostname": [ "read" ],
-				"/sbin/sysupgrade --list-backup": [ "exec" ]
+				"/sbin/sysupgrade --list-backup": [ "exec" ],
+				"/tmp/uci-restore.config": [ "read" ],
+				"/sbin/uci show": [ "exec" ],
+				"/etc/rms/apply_config.sh": [ "list" ]
 			},
 			"ubus": {
 				"file": [ "exec", "read", "stat" ]
@@ -166,7 +169,9 @@
 				"/sbin/sysupgrade --test /tmp/firmware.bin": [ "exec" ],
 				"/sbin/sysupgrade /tmp/firmware.bin": [ "exec" ],
 				"/tmp/backup.tar.gz": [ "write" ],
-				"/tmp/firmware.bin": [ "write" ]
+				"/tmp/firmware.bin": [ "write" ],
+				"/etc/rms/apply_config.sh /tmp/uci-restore.config": [ "exec" ],
+				"/tmp/uci-restore.config": [ "write" ]
 			},
 			"ubus": {
 				"file": [ "exec", "remove", "write" ],

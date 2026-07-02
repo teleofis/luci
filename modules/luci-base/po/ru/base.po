@@ -10910,3 +10910,45 @@ msgstr "Входное напряжение"
 
 msgid "Temperature"
 msgstr "Температура"
+
+msgid "Download UCI configuration"
+msgstr "Скачать конфигурацию UCI"
+
+msgid "Export uci.config"
+msgstr "Экспорт uci.config"
+
+msgid "Download a uci.config snapshot (uci show format) of the current configuration."
+msgstr "Скачать текущую конфигурацию в формате uci show."
+
+msgid "The uci command failed with code %d"
+msgstr "Команда uci завершилась с кодом %d"
+
+msgid "Restore UCI configuration"
+msgstr "Восстановить конфигурацию UCI"
+
+msgid "Upload uci.config..."
+msgstr "Загрузить uci.config..."
+
+msgid "Upload a uci.config snapshot (uci show format). It will be applied and the device will reboot."
+msgstr "Загрузить файл конфигурации в формате uci show. Он будет применён, после чего устройство перезагрузится."
+
+msgid "Apply UCI configuration?"
+msgstr "Применить конфигурацию UCI?"
+
+msgid "The uploaded snapshot will be applied. This rewrites the affected configuration packages and reboots the device. Press \"Continue\" to apply, or \"Cancel\" to abort the operation."
+msgstr "Загруженный снимок будет применён. Это перезапишет затронутые пакеты конфигурации и перезагрузит устройство. Нажмите «Продолжить», чтобы применить, или «Отмена», чтобы прервать операцию."
+
+msgid "Applying…"
+msgstr "Применение…"
+
+msgid "Applying UCI configuration…"
+msgstr "Применение конфигурации UCI…"
+
+msgid "The configuration is being applied and the device will reboot when finished."
+msgstr "Конфигурация применяется, по завершении устройство перезагрузится."
+
+msgid "apply_config.sh failed with code %d — the previous configuration was restored"
+msgstr "apply_config.sh завершился с кодом %d — предыдущая конфигурация восстановлена"
+
+msgid "The system is rebooting now. If the applied configuration changed the current LAN IP address, you might need to reconnect manually."
+msgstr "Система перезагружается. Если применённая конфигурация изменила текущий IP-адрес LAN, возможно, потребуется переподключиться вручную."

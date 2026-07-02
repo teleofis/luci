@@ -71,7 +71,8 @@ return view.extend({
 			fs.trimmed('/proc/sys/kernel/hostname'),
 			fs.trimmed('/proc/mtd'),
 			fs.trimmed('/proc/partitions'),
-			fs.trimmed('/proc/mounts')
+			fs.trimmed('/proc/mounts'),
+			L.resolveDefault(fs.stat('/etc/rms/apply_config.sh'), {})
 		];
 
 		return Promise.all(tasks);
@@ -88,6 +89,30 @@ return view.extend({
 
 		form.submit();
 		form.parentNode.removeChild(form);
+	},
+
+	handleUciExport: function(hostname, ev) {
+		return fs.exec('/sbin/uci', [ 'show' ]).then(function(res) {
+			if (res.code != 0) {
+				ui.addNotification(null, [
+					E('p', _('The uci command failed with code %d').format(res.code)),
+					res.stderr ? E('pre', {}, [ res.stderr ]) : ''
+				]);
+				L.raise('Error', 'uci show failed');
+			}
+
+			var blob = new Blob([ res.stdout || '' ], { type: 'application/octet-stream' }),
+			    url = window.URL.createObjectURL(blob),
+			    a = E('a', {
+			    	'href': url,
+			    	'download': '%s-uci.config'.format(hostname || 'openwrt')
+			    });
+
+			document.body.appendChild(a);
+			a.click();
+			document.body.removeChild(a);
+			window.URL.revokeObjectURL(url);
+		});
 	},
 
 	handleFirstboot: function(ev) {
@@ -167,6 +192,71 @@ return view.extend({
 			}, this))
 			.catch(function(e) { ui.addNotification(null, E('p', e.message)) })
 			.finally(function() { btn.firstChild.data = _('Upload archive...') });
+	},
+
+	handleUciRestore: function(ev) {
+		return ui.uploadFile('/tmp/uci-restore.config', ev.target)
+			.then(L.bind(function(btn, res) {
+				return fs.read('/tmp/uci-restore.config');
+			}, this, ev.target))
+			.then(L.bind(function(btn, data) {
+				ui.showModal(_('Apply UCI configuration?'), [
+					E('p', _('The uploaded snapshot will be applied. This rewrites the affected configuration packages and reboots the device. Press "Continue" to apply, or "Cancel" to abort the operation.')),
+					E('pre', {}, [ data || '' ]),
+					E('div', { 'class': 'right' }, [
+						E('button', {
+							'class': 'btn',
+							'click': ui.createHandlerFn(this, function(ev) {
+								return fs.remove('/tmp/uci-restore.config').finally(ui.hideModal);
+							})
+						}, [ _('Cancel') ]), ' ',
+						E('button', {
+							'class': 'btn cbi-button-action important',
+							'click': ui.createHandlerFn(this, 'handleUciRestoreConfirm', btn)
+						}, [ _('Continue') ])
+					])
+				]);
+			}, this, ev.target))
+			.catch(function(e) { ui.addNotification(null, E('p', e.message)) })
+			.finally(L.bind(function(btn) {
+				btn.firstChild.data = _('Upload uci.config...');
+			}, this, ev.target));
+	},
+
+	handleUciRestoreConfirm: function(btn, ev) {
+		btn.firstChild.data = _('Applying…');
+
+		ui.showModal(_('Applying UCI configuration…'), [
+			E('p', { 'class': 'spinning' }, _('The configuration is being applied and the device will reboot when finished.'))
+		]);
+
+		return fs.exec('/etc/rms/apply_config.sh', [ '/tmp/uci-restore.config' ])
+			.then(L.bind(function(res) {
+				if (res.code != 0) {
+					ui.hideModal();
+					ui.addNotification(null, [
+						E('p', _('apply_config.sh failed with code %d — the previous configuration was restored').format(res.code)),
+						res.stderr ? E('pre', {}, [ res.stderr ]) : ''
+					]);
+					L.raise('Error', 'apply_config.sh failed');
+				}
+
+				return fs.exec('/sbin/reboot');
+			}, this))
+			.then(L.bind(function(res) {
+				if (res.code != 0) {
+					ui.addNotification(null, E('p', _('The reboot command failed with code %d').format(res.code)));
+					L.raise('Error', 'Reboot failed');
+				}
+
+				ui.showModal(_('Rebooting…'), [
+					E('p', { 'class': 'spinning' }, _('The system is rebooting now. If the applied configuration changed the current LAN IP address, you might need to reconnect manually.'))
+				]);
+
+				ui.awaitReconnect(window.location.host, '192.168.88.1', 'openwrt.lan');
+			}, this))
+			.catch(function(e) { ui.addNotification(null, E('p', e.message)) })
+			.finally(function() { btn.firstChild.data = _('Upload uci.config...') });
 	},
 
 	handleBlock: function(hostname, ev) {
@@ -379,6 +469,7 @@ return view.extend({
 		    procmounts = rpc_replies[4],
 		    has_rootfs_data = (procmtd.match(/"rootfs_data"/) != null) || (procmounts.match("overlayfs:\/overlay \/ ") != null),
 		    storage_size = findStorageSize(procmtd, procpart),
+		    has_apply_config = (rpc_replies[5].type == 'file'),
 		    m, s, o, ss;
 
 		m = new form.JSONMap(mapdata, _('Flash operations'));
@@ -396,6 +487,11 @@ return view.extend({
 		o.inputtitle = _('Generate archive');
 		o.onclick = this.handleBackup;
 
+		o = ss.option(form.Button, 'dl_uci', _('Download UCI configuration'), _('Download a uci.config snapshot (uci show format) of the current configuration.'));
+		o.inputstyle = 'action';
+		o.inputtitle = _('Export uci.config');
+		o.onclick = L.bind(this.handleUciExport, this, hostname);
+
 
 		o = s.option(form.SectionValue, 'actions', form.NamedSection, 'actions', 'actions', _('Restore'), _('To restore configuration files, you can upload a previously generated backup archive here. To reset the firmware to its initial state, click "Perform reset" (only possible with squashfs images).'));
 		ss = o.subsection;
@@ -411,6 +507,13 @@ return view.extend({
 		o.inputstyle = 'action important';
 		o.inputtitle = _('Upload archive...');
 		o.onclick = L.bind(this.handleRestore, this);
+
+		if (has_apply_config) {
+			o = ss.option(form.Button, 'restore_uci', _('Restore UCI configuration'), _('Upload a uci.config snapshot (uci show format). It will be applied and the device will reboot.'));
+			o.inputstyle = 'action';
+			o.inputtitle = _('Upload uci.config...');
+			o.onclick = L.bind(this.handleUciRestore, this);
+		}
 
 
 		var mtdblocks = [];
