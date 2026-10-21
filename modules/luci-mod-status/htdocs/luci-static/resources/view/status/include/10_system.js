@@ -75,8 +75,13 @@ return baseclass.extend({
 			fields.push('fw: %s (bl: %s)'.format(custinfo.svfw,custinfo.blfw));
 		}
 		if (custinfo.voltage != null) {
+			var volt = '%.2f V'.format(custinfo.voltage / 1000.0);
+
+			if (custinfo.voltage_back != null)
+				volt += ', %.2f V'.format(custinfo.voltage_back / 1000.0);
+
 			fields.push(_('Input Voltage'));
-			fields.push('%.2f V'.format(custinfo.voltage / 1000.0));
+			fields.push(volt);
 		}
 		if (custinfo.temperature != null) {
 			fields.push(_('Temperature'));
