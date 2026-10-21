@@ -2550,6 +2550,7 @@ msgstr ""
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:196
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:222
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/netdev.js:13
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:13
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:248
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
@@ -9205,6 +9206,10 @@ msgstr ""
 msgid "Send the hostname of this device"
 msgstr ""
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:7
+msgid "Serial port activity (kernel: tty)"
+msgstr ""
+
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:89
 msgid "Server"
 msgstr ""
@@ -10125,6 +10130,12 @@ msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/heartbeat.js:7
 msgid "The LED flashes to simulate actual heart beat."
+msgstr ""
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:8
+msgid ""
+"The LED flashes with data transmission and reception on the configured "
+"serial port."
 msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/netdev.js:8

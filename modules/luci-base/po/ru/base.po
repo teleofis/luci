@@ -2796,6 +2796,7 @@ msgstr "Зона назначения"
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:196
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:222
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/netdev.js:13
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:13
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:248
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:281
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:355
@@ -9980,6 +9981,10 @@ msgstr "Отправка многоадресного маяка"
 msgid "Send the hostname of this device"
 msgstr "Отправлять имя хоста этого устройства"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:7
+msgid "Serial port activity (kernel: tty)"
+msgstr "Активность последовательного порта (kernel: tty)"
+
 #: protocols/luci-proto-batman-adv/htdocs/luci-static/resources/protocol/batadv.js:89
 msgid "Server"
 msgstr "Сервер"
@@ -11029,6 +11034,14 @@ msgstr "Светодиод мигает с настроенной частото
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/heartbeat.js:7
 msgid "The LED flashes to simulate actual heart beat."
 msgstr "Светодиод мигает, имитируя реальное сердцебиение."
+
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/tty.js:8
+msgid ""
+"The LED flashes with data transmission and reception on the configured "
+"serial port."
+msgstr ""
+"Светодиод мигает при приёме и передаче данных через выбранный "
+"последовательный порт."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/led-trigger/netdev.js:8
 msgid ""
@@ -13713,3 +13726,45 @@ msgstr "Входное напряжение"
 
 msgid "Temperature"
 msgstr "Температура"
+
+msgid "Download UCI configuration"
+msgstr "Скачать конфигурацию UCI"
+
+msgid "Export uci.config"
+msgstr "Экспорт uci.config"
+
+msgid "Download a uci.config snapshot (uci show format) of the current configuration."
+msgstr "Скачать текущую конфигурацию в формате uci show."
+
+msgid "The uci command failed with code %d"
+msgstr "Команда uci завершилась с кодом %d"
+
+msgid "Restore UCI configuration"
+msgstr "Восстановить конфигурацию UCI"
+
+msgid "Upload uci.config..."
+msgstr "Загрузить uci.config..."
+
+msgid "Upload a uci.config snapshot (uci show format). It will be applied and the device will reboot."
+msgstr "Загрузить файл конфигурации в формате uci show. Он будет применён, после чего устройство перезагрузится."
+
+msgid "Apply UCI configuration?"
+msgstr "Применить конфигурацию UCI?"
+
+msgid "The uploaded snapshot will be applied. This rewrites the affected configuration packages and reboots the device. Press \"Continue\" to apply, or \"Cancel\" to abort the operation."
+msgstr "Загруженный снимок будет применён. Это перезапишет затронутые пакеты конфигурации и перезагрузит устройство. Нажмите «Продолжить», чтобы применить, или «Отмена», чтобы прервать операцию."
+
+msgid "Applying…"
+msgstr "Применение…"
+
+msgid "Applying UCI configuration…"
+msgstr "Применение конфигурации UCI…"
+
+msgid "The configuration is being applied and the device will reboot when finished."
+msgstr "Конфигурация применяется, по завершении устройство перезагрузится."
+
+msgid "apply_config.sh failed with code %d — the previous configuration was restored"
+msgstr "apply_config.sh завершился с кодом %d — предыдущая конфигурация восстановлена"
+
+msgid "The system is rebooting now. If the applied configuration changed the current LAN IP address, you might need to reconnect manually."
+msgstr "Система перезагружается. Если применённая конфигурация изменила текущий IP-адрес LAN, возможно, потребуется переподключиться вручную."
